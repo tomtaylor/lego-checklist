@@ -340,10 +340,49 @@ function App() {
         )}
 
         {!loading && !error && parts.length === 0 && currentSetNumber === '' && (
-          <div className="text-center py-12 text-gray-500">
-            <p>Enter a LEGO set number above to get started</p>
+          <div className="text-center py-12 text-gray-600">
+            <ol className="inline-block text-left space-y-2">
+              <li>1. Enter a LEGO set number above</li>
+              <li>2. Check off the pieces you've got</li>
+              <li>3. Build it</li>
+            </ol>
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="mt-12 pt-8 pb-4 border-t border-gray-200 text-center text-sm text-gray-600">
+          <p>
+            Built by{' '}
+            <a
+              href="https://www.tomtaylor.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              Tom Taylor
+            </a>
+          </p>
+          <p className="mt-2">
+            LEGO data provided by the{' '}
+            <a
+              href="https://rebrickable.com/api/v3/docs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              Rebrickable API
+            </a>
+            ,{' '}
+            <a
+              href="https://github.com/tomtaylor/lego-checklist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              source code available on GitHub
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );
